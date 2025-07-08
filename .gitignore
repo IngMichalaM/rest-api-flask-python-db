@@ -3,3 +3,5 @@ __pycache__
 /env
 /flask_python_db
 ebook.txt
+cli_docker_token.txt
+comments.txt
