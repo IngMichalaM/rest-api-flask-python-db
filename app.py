@@ -6,52 +6,19 @@ from db import items, stores
 
 app = Flask(__name__)
 
-# orig structuree
-# stores = [
-#     {
-#         "name": "My Store",
-#         "items": [
-#             {
-#                 "name": "Chair",
-#                 "price": 15.99
-#             }
-#         ]
-#     },
-#     {
-#         "items": [],
-#         "name": "Pet Store"
-#     },
-#     {
-#         "items": [],
-#         "name": "Backery"
-#     }
-# ]
-
-# new - in db.py
-# stores = {}
-# items = {
-#     1: {
-#         "name": "Chair",
-#         "price": 15.99
-#     },
-#     2: {
-#         "name": "Croissant",
-#         "price": 1.25
-#     }
-# }
-
 
 @app.get("/store")
 def get_stores():
     return {"stores": stores}, 200
 
 
-@app.get("/store/<string:name>")
-def get_store(name):
-    for store in stores:
-        if store["name"] == name:
-            return store, 200
-    return {"message": "Store not found"}, 404
+@app.get("/store/<string:store_id>")
+def get_store(store_id):
+    try:
+        return stores[store_id], 200
+    # only returns info about store, not the items, since they are now kept separately
+    except KeyError:
+        return {"message": "Store not found"}, 404
 
 
 @app.post("/store")
