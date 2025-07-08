@@ -1,29 +1,44 @@
 from flask import Flask, request
+from db import items, stores
 
 # to run the app: flask run
 # http://127.0.0.1:5000
 
 app = Flask(__name__)
 
-stores = [
-    {
-        "name": "My Store",
-        "items": [
-            {
-                "name": "Chair",
-                "price": 15.99
-            }
-        ]
-    },
-    {
-        "items": [],
-        "name": "Pet Store"
-    },
-    {
-        "items": [],
-        "name": "Backery"
-    }
-]
+# orig structuree
+# stores = [
+#     {
+#         "name": "My Store",
+#         "items": [
+#             {
+#                 "name": "Chair",
+#                 "price": 15.99
+#             }
+#         ]
+#     },
+#     {
+#         "items": [],
+#         "name": "Pet Store"
+#     },
+#     {
+#         "items": [],
+#         "name": "Backery"
+#     }
+# ]
+
+# new - in db.py
+# stores = {}
+# items = {
+#     1: {
+#         "name": "Chair",
+#         "price": 15.99
+#     },
+#     2: {
+#         "name": "Croissant",
+#         "price": 1.25
+#     }
+# }
 
 
 @app.get("/store")
