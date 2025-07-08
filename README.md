@@ -1,4 +1,15 @@
-structure of the stores and items
+
+
+Content of the stores_as_dictionaries branch 
+- Dockerfile
+- .flaskenv
+- db.py
+- new stores and items sturcure
+
+Structure of the stores and items
+- original structure - branch *main*
+- new structure - dictionaries - branch *stores_as_dictionaries*
+
 
 Original structure
 - lists 
@@ -19,17 +30,35 @@ stores = [
 ]
 ```
 
+```
+{
+  "items": [
+    {
+      "name": "Chair",
+      "price": 15.99
+    }
+  ]
+}
+```
 
+New structure
+- dictionaries
+- no longer as global variable in app.py
+- items and stores moved to a separate file db.py
 
-# new - in db.py
-# stores = {}
-# items = {
-#     1: {
-#         "name": "Chair",
-#         "price": 15.99
-#     },
-#     2: {
-#         "name": "Croissant",
-#         "price": 1.25
-#     }
-# }
+``` 
+stores = {}
+```
+
+``` 
+items = {
+    1: {
+        "name": "Chair",
+        "price": 15.99
+    },
+    2: {
+        "name": "Croissant",
+        "price": 1.25
+    }
+}
+```
