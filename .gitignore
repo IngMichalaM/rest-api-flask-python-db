@@ -1,0 +1,6 @@
+/.idea
+__pycache__
+/env
+/flask_python_db
+Dockerfile
+ebook.txt
