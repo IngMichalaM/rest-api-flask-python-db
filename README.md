@@ -1,5 +1,7 @@
-# REST APUI with Flask and Python in 2025
-Covers the lectures from the lecture 61, Section 4: Introduction to Docker 
+# REST API with Flask and Python in 2025
+Covers the lectures from the lecture 61
+- Section 4: Introduction to Docker
+- Section 5: Flask-Smorest for more efficient development
 
 
 Content of the stores_as_dictionaries branch 

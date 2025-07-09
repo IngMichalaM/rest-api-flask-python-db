@@ -17,6 +17,8 @@ def get_stores():
 @app.post("/store")
 def create_store():
     store_data = request.get_json()
+    # print(f"{store_data=}")
+    # print(type(store_data))
     # check store name
     # check that the new store does not already exist
     if "name" not in store_data:
@@ -24,6 +26,7 @@ def create_store():
               message="Bad request. Ensure that 'name' is included in the JSON payload.")
 
     for store in stores.values():
+        print(store)
         if store_data["name"] == store["name"]:
             abort(400, message="Store already exists.")
 
@@ -45,7 +48,7 @@ def create_item():
     ):
         abort(
             400,
-            message="Bad request. Ensure that 'price', 'store_id' and 'name'are included in the JSON payload."
+            message="Bad request. Ensure that 'price', 'store_id' and 'name' are included in the JSON payload."
         )
 
     # check duplication of the items
@@ -68,6 +71,9 @@ def create_item():
 
 @app.get("/item")
 def get_all_items():
+    # print('------------------')
+    # print(items)
+    # print(items.values())
     return {"items": list(items.values())}
 
 
@@ -84,5 +90,43 @@ def get_store(store_id):
 def get_item(item_id):
     try:
         return items[item_id]
+    except KeyError:
+        abort(404, message="Item not found.")
+
+
+# TODO: cannot delte a store where are items
+@app.delete("/store/<string:store_id>")
+def delete_store(store_id):
+    try:
+        del stores[store_id]
+        return {"message": "Store deleted."}
+    except KeyError:
+        abort(404, message="Store not found.")
+
+
+# delete item
+@app.delete("/item/<string:item_id>")
+def delete_item(item_id):
+    try:
+        del items[item_id]
+        return {"message": "Item deleted."}
+    except KeyError:
+        abort(404, message="Item not found.")
+
+
+@app.put("/item/<string:item_id>")
+def update_item(item_id):
+    item_data = request.get_json()
+    print(item_data)
+    if "price" not in item_data or "name" not in item_data:
+        abort(400,
+              message="Bad request. Ensure that 'price' and 'name' are included in the JSON payload.")
+
+    try:
+        item = items[item_id]
+        print(item)
+        # update the item
+        item |= item_data  # in-place union
+        return item
     except KeyError:
         abort(404, message="Item not found.")
