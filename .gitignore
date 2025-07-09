@@ -2,6 +2,7 @@
 __pycache__
 /env
 /flask_python_db
+/flask_python_db_dict
 ebook.txt
 cli_docker_token.txt
 comments.txt
