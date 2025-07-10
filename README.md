@@ -84,4 +84,7 @@ items = {
 
 ## Run docker from command line
  `docker run -p 5000:5000 rest-api-flask-python`
+or 
+`docker run -dp 5000:5000 rest-api-flask-python`
+to run the docker in the background and still access the command line. 
 
