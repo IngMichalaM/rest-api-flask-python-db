@@ -52,6 +52,19 @@ or
 to run the docker in the background and still access the command line. 
 
 
+# GIT 
+- log: `git --no-pager log --oneline`
+- add: `git add <file name>`
+- commit: `git commit -m "<message>"`
+- correct commit message (interactive rebase): 
+  - `git rebase -i HEAD~X` - X how many commits back to show
+    - reword - edit commit message
+    - fixup - like squash, but discard commit's tag (put two commits together, keeping the older commit message)
+- tags: 
+  - `git tag <tag name> <commit hash>`
+  - list of tags: `git tag`
+
+
 
 
 comments 
