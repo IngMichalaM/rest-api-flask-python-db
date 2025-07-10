@@ -1,52 +1,12 @@
 # REST API with Flask and Python in 2025
-Covers the lectures from the lecture 61
-- Section 4: Introduction to Docker
-- Section 5: Flask-Smorest for more efficient development
+Covers the lectures from the lecture 70
+- Lecture 70: How to use Blueprints and MethodViews in Flask
+- Lecture 71: How to write marshmallow schemas for our API
+- Lecture 72: How to perform data validation with marshmallow
+- Lecture 73: Decorating responses with Flask-Smorest
 
-Content of the stores_as_dictionaries branch 
-- Dockerfile
-- .flaskenv
-- db.py
-- new stores and items sturcure
-
-Structure of the stores and items
-- original structure - branch *main*
-- new structure - dictionaries - branch *stores_as_dictionaries*
-
-Original structure
-- lists 
-- directly in the app.py as global variable
-- example 
-
-``` 
-stores = [
-     {
-         "name": "My Store",
-         "items": [
-             {
-                 "name": "Chair",
-                 "price": 15.99
-             }
-         ]
-     }
-]
-```
-
-```
-{
-  "items": [
-    {
-      "name": "Chair",
-      "price": 15.99
-    }
-  ]
-}
-```
-
-New structure
-- dictionaries
-- no longer as global variable in app.py
-- items and stores moved to a separate file db.py
+Data structure
+- dictionaries in file db.py
 
 ``` 
 stores = {}
@@ -64,6 +24,9 @@ items = {
     }
 }
 ```
+
+## Flask Blueprint
+A Flask Blueprint is a way to organize a Flask application into smaller, modular components. It helps structure your code in a clean and scalable way, especially for larger applications.
 
 ## Install requirements.txt
  `pip install -r requirements.txt`
@@ -88,3 +51,11 @@ or
 `docker run -dp 5000:5000 rest-api-flask-python`
 to run the docker in the background and still access the command line. 
 
+
+
+
+comments 
+Lecture 70
+Hi Jose, 
+As you have shonw the POST /item in swagger, we don't acctually get the structure of the body from it, do we? 
+And the obligatory body content. 
