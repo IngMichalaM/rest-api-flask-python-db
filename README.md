@@ -5,8 +5,6 @@ Covers the lectures from the lecture 70
 - Lecture 72: How to perform data validation with marshmallow
 - Lecture 73: Decorating responses with Flask-Smorest
 
-Lecture 72 - Marshmallow Schema 
-Lecture 73 - Marshmallow  - arguments and response validation (API decorators), swagger 
 
 Data structure
 - dictionaries in file db.py
