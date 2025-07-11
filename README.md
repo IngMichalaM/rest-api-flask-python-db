@@ -5,6 +5,9 @@ Covers the lectures from the lecture 70
 - Lecture 72: How to perform data validation with marshmallow
 - Lecture 73: Decorating responses with Flask-Smorest
 
+Lecture 72 - Marshmallow Schema 
+Lecture 73 - Marshmallow  - arguments and response validation (API decorators), swagger 
+
 Data structure
 - dictionaries in file db.py
 
@@ -64,11 +67,3 @@ to run the docker in the background and still access the command line.
   - `git tag <tag name> <commit hash>`
   - list of tags: `git tag`
 
-
-
-
-comments 
-Lecture 70
-Hi Jose, 
-As you have shonw the POST /item in swagger, we don't acctually get the structure of the body from it, do we? 
-And the obligatory body content. 
