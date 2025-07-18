@@ -17,8 +17,6 @@ def get_stores():
 @app.post("/store")
 def create_store():
     store_data = request.get_json()
-    # print(f"{store_data=}")
-    # print(type(store_data))
     # check store name
     # check that the new store does not already exist
     if "name" not in store_data:
@@ -71,9 +69,6 @@ def create_item():
 
 @app.get("/item")
 def get_all_items():
-    # print('------------------')
-    # print(items)
-    # print(items.values())
     return {"items": list(items.values())}
 
 
@@ -94,7 +89,7 @@ def get_item(item_id):
         abort(404, message="Item not found.")
 
 
-# TODO: cannot delte a store where are items
+# TODO: cannot delete a store where are items
 @app.delete("/store/<string:store_id>")
 def delete_store(store_id):
     try:
