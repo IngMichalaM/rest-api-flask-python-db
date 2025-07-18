@@ -5,7 +5,6 @@ Covers the lectures from the lecture 70
 - Lecture 72: How to perform data validation with marshmallow
 - Lecture 73: Decorating responses with Flask-Smorest
 
-
 Data structure
 - dictionaries in file db.py
 
@@ -52,6 +51,8 @@ or
 `docker run -dp 5000:5000 rest-api-flask-python`
 to run the docker in the background and still access the command line. 
 
+# Swagger 
+http://127.0.0.1:5000/swagger-ui (the flask app must be running)
 
 # GIT 
 - log: `git --no-pager log --oneline`
