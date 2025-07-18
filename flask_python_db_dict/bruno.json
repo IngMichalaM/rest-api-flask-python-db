@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "flask_python_db_dict",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

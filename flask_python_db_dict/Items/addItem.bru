@@ -1,0 +1,18 @@
+meta {
+  name: addItem
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:5000/item
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"store_id": "63696264051e4b3f89389d7b13db8f29",
+    "name": "blob au chocolat ",
+   "price": 2.6
+  }
+}
