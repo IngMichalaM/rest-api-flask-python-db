@@ -71,7 +71,7 @@ or with the `--no-pager`
   - create new branch, but stay in the current branch `git branch <branch name>`
   - create new branch and switch to it 
     - `git checkout -b <branch name>`
-    - `git swith -c <branch name>`
+    - `git switch -c <branch name>`
 - delete local branch
   - `git branch -d <branch-name>`
   - force-delete, when there are unmerged changes `git branch -D <branch-name>`
