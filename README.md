@@ -1,5 +1,10 @@
-# REST APUI with Flask and Python in 2025
-Covers the lectures 52-60 - Section 3: Your first REST API
+# REST API with Flask and Python in 2025
+**Jose Salvatiera, Udemy**
+
+Covers the lectures 52-60 - Section 3: Your first REST API. 
+Lessons before were a Python refresher.
+Data are saved only locally using a list (stores and items). Everything gets deleted when the app stops.
+Storing of the data will be modified in the next lectures, as well as use of Marshmallow, Flask-Smorest and Flask-blueprints.
 
 ## Install requirements.txt
  `pip install -r requirements.txt`
@@ -21,9 +26,14 @@ Covers the lectures 52-60 - Section 3: Your first REST API
 ## Run docker from command line
  `docker run -p 5000:5000 rest-api-flask-python`
 
+## Bruno
+- flask_python_db contains the collection for the BE test using Bruno
 
+# GIT
+>> Jose + Colt**
+>> - current course (Jose Salvatiera) - Section 10
+>> - The Git and Github Bootcamp - Colt Steele
 
-# GIT 
 - log: `git log` (escape :q) 
   - without pages and only one line commits: `git --no-pager log --oneline`
   - without: `--no-pager` we stay on the page - to quite, type `q`.
